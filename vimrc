@@ -93,6 +93,7 @@ nnoremap <F8> :set textwidth=80<CR>
 nmap <leader>2 :call Tabs(2, 1)<CR>
 nmap <leader>4 :call Tabs(4, 1)<CR>
 nmap <leader>8 :call Tabs(8, 1)<CR>
+nmap <leader>@ :call Tabs(2, 0)<CR>
 nmap <leader>$ :call Tabs(4, 0)<CR>
 nmap <leader>* :call Tabs(8, 0)<CR>
 call Tabs(4, 1)
