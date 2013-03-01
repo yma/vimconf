@@ -20,12 +20,6 @@ nmap <leader>n :set number!<CR>
 nmap <leader>d :bn<CR>:bd#<CR>
 nmap <leader>w :%s/\s\+$//gc<CR>
 
-" plugin Gundo
-nmap <leader>u :GundoToggle<CR>
-
-" plugin Gist
-let g:gist_post_private = 1
-
 " Use the same symbols as TextMate for tabstops, EOLs, spaces
 set listchars=tab:▸\ ,eol:¬,trail:·
 set list
@@ -69,54 +63,14 @@ filetype on
 
 hi Folded ctermbg=0 ctermfg=2
 
-function! Tabs(spaces, expand)
-    if a:expand
-        set expandtab
-        set tabstop=8
-    else
-        set noexpandtab
-        execute 'set tabstop='.a:spaces
-    endif
-    execute 'set softtabstop='.a:spaces
-    execute 'set shiftwidth='.a:spaces
-endfunction
-
-function! PlayHtml()
-    " a javascript expression is used as an arg value
-    syn region  javaScriptExpression contained start=+&{+ keepend end=+};\?+ contains=@htmlJavaScript,@htmlPreproc
-endfunction
-
-command Limit80 set textwidth=80
-command PlayHtml call PlayHtml()
-nnoremap <F8> :set textwidth=80<CR>
-
-nmap <leader>2 :call Tabs(2, 1)<CR>
-nmap <leader>4 :call Tabs(4, 1)<CR>
-nmap <leader>8 :call Tabs(8, 1)<CR>
-nmap <leader>@ :call Tabs(2, 0)<CR>
-nmap <leader>$ :call Tabs(4, 0)<CR>
-nmap <leader>* :call Tabs(8, 0)<CR>
-call Tabs(4, 1)
+call ide#Tabs(4, 1)
+call ide#Shortcuts()
 
 
-nnoremap <F9> :set invincsearch<CR>
-nnoremap <F10> :set invhls<CR>
-nnoremap <F12> :IDE<CR>
-nnoremap <C-F12> :setlocal spell spelllang=fr<CR>
+" Plugins configuration
 
-" Don't work
-"nnoremap <C-F9> /[<=>]\{7\}<CR>
+" Gundo
+nmap <leader>u :GundoToggle<CR>
 
-let g:netrw_liststyle=3 " Use tree-mode as default view
-let g:netrw_browse_split=4 " Open file in previous buffer
-let g:netrw_preview=1 " preview window shown in a vertically split
-
-function! IDE()
-    set splitbelow
-    "set splitright
-    "set nosplitright
-    30vsplit +Explore
-    "set splitright
-endfunction
-
-command IDE call IDE()
+" Gist
+let g:gist_post_private = 1
