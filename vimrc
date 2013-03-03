@@ -59,8 +59,8 @@ set scrolloff=5
 
 
 filetype on
-"filetype plugin on
-"filetype indent on
+filetype plugin on
+filetype indent on
 
 hi Folded ctermbg=0 ctermfg=2
 
