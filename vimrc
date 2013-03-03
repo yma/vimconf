@@ -3,7 +3,8 @@ execute pathogen#infect()
 syntax on
 colorscheme ron
 
-set mouse=a
+set hidden "Don't close buffer, keep undo history
+"set mouse=a
 set linebreak
 set wildmenu
 set nomodeline
