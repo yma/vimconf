@@ -10,3 +10,6 @@
 [submodule "scripts/plugin/webapi-vim"]
 	path = scripts/plugin/webapi-vim
 	url = https://github.com/mattn/webapi-vim
+[submodule "scripts/colors/inkpot"]
+	path = scripts/colors/inkpot
+	url = https://github.com/ciaranm/inkpot.git

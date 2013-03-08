@@ -1,7 +1,12 @@
 execute pathogen#infect()
 
+"Colors settings
 syntax on
-colorscheme ron
+set background=dark
+"colorscheme ron
+"colorscheme inkpot
+"highlight Normal     ctermbg=none
+colorscheme synic
 
 set hidden "Don't close buffer, keep undo history
 "set mouse=a
@@ -28,15 +33,7 @@ set list
 set number
 highlight LineNr ctermfg=darkgrey ctermbg=black
 
-highlight StatusLine ctermfg=black ctermbg=yellow
-highlight StatusLineNC ctermfg=black ctermbg=green
-highlight VertSplit ctermfg=black ctermbg=green
 set fcs+=vert:╹
-
-highlight TabLineFill ctermfg=black ctermbg=white
-highlight TabLine ctermfg=darkgreen ctermbg=black cterm=NONE
-highlight TabLineSel ctermfg=white ctermbg=black
-highlight Title ctermfg=yellow ctermbg=black
 
 " Easy window resizing
 :map <C-h> <C-w><lt>

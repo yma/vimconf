@@ -29,6 +29,19 @@ function! ide#IDE()
     "set splitright
 endfunction
 
+function! ide#Colors()
+    highlight LineNr ctermfg=darkgrey ctermbg=black
+
+    highlight StatusLine ctermbg=black ctermfg=yellow
+    highlight StatusLineNC ctermbg=black ctermfg=green
+    highlight VertSplit ctermbg=black ctermfg=green
+
+    highlight TabLineFill ctermbg=black ctermfg=white
+    highlight TabLine ctermfg=darkgreen ctermbg=black cterm=NONE
+    highlight TabLineSel ctermfg=white ctermbg=black
+    highlight Title ctermfg=yellow ctermbg=black
+endfunction
+
 function! ide#Tabs(spaces, expand)
     if a:expand
         set expandtab
