@@ -16,6 +16,7 @@ set nomodeline
 set showmode
 set incsearch
 set hlsearch
+set noequalalways "Disable automatic resizing on close/split
 
 set autoindent
 set smartindent
