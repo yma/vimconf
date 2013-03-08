@@ -1,1 +1,1 @@
-../scripts/gundo.vim/
+../scripts/plugin/gundo.vim
