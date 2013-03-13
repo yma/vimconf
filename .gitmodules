@@ -13,3 +13,12 @@
 [submodule "scripts/colors/inkpot"]
 	path = scripts/colors/inkpot
 	url = https://github.com/ciaranm/inkpot.git
+[submodule "scripts/colors/vim-distinguished"]
+	path = scripts/colors/vim-distinguished
+	url = https://github.com/Lokaltog/vim-distinguished.git
+[submodule "scripts/colors/jellybeans.vim"]
+	path = scripts/colors/jellybeans.vim
+	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "scripts/colors/vim-vividchalk"]
+	path = scripts/colors/vim-vividchalk
+	url = https://github.com/tpope/vim-vividchalk.git
