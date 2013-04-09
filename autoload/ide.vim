@@ -3,8 +3,8 @@ function! ide#Shortcuts()
     nmap <leader>4 :call ide#Tabs(4, 1)<CR>
     nmap <leader>8 :call ide#Tabs(8, 1)<CR>
     nmap <leader>@ :call ide#Tabs(2, 0)<CR>
-    nmap <leader>$ :call Tide#abs(4, 0)<CR>
-    nmap <leader>* :call Tide#abs(8, 0)<CR>
+    nmap <leader>$ :call ide#Tabs(4, 0)<CR>
+    nmap <leader>* :call ide#Tabs(8, 0)<CR>
 
     nnoremap <F8> :set textwidth=80<CR>
     nnoremap <F9> :set invincsearch<CR>
