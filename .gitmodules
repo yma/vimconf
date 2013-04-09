@@ -22,3 +22,6 @@
 [submodule "scripts/colors/vim-vividchalk"]
 	path = scripts/colors/vim-vividchalk
 	url = https://github.com/tpope/vim-vividchalk.git
+[submodule "scripts/plugin/nerdtree"]
+	path = scripts/plugin/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git

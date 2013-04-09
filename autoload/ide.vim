@@ -16,7 +16,7 @@ function! ide#Shortcuts()
     "nnoremap <C-F9> /[<=>]\{7\}<CR>
 endfunction
 
-function! ide#IDE()
+function! ide#IDE_netrw()
     let g:netrw_liststyle=3 " Use tree-mode as default view
     let g:netrw_browse_split=4 " Open file in previous buffer
     let g:netrw_preview=1 " preview window shown in a vertically split
@@ -27,6 +27,10 @@ function! ide#IDE()
     "set nosplitright
     30vsplit +Explore
     "set splitright
+endfunction
+
+function! ide#IDE_nerdtree()
+    NERDTree
 endfunction
 
 function! ide#Colors()
@@ -59,6 +63,6 @@ function! ide#PlayHtml()
     syn region  javaScriptExpression contained start=+&{+ keepend end=+};\?+ contains=@htmlJavaScript,@htmlPreproc
 endfunction
 
-command IDE call ide#IDE()
+command IDE call ide#IDE_nerdtree()
 command Limit80 set textwidth=80
 command PlayHtml call ide#PlayHtml()
