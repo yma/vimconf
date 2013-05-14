@@ -1,0 +1,1 @@
+../scripts/plugin/ack.vim

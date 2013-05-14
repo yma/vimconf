@@ -1,4 +1,5 @@
 execute pathogen#infect()
+Helptags
 
 "Colors settings
 syntax on
@@ -26,6 +27,7 @@ nmap <leader>l :set list!<CR>
 nmap <leader>n :set number!<CR>
 nmap <leader>d :bn<CR>:bd#<CR>
 nmap <leader>w :%s/\s\+$//gc<CR>
+nmap <leader>s :AckFromSearch<CR>
 
 " Use the same symbols as TextMate for tabstops, EOLs, spaces
 set listchars=tab:▸\ ,eol:¬,trail:·

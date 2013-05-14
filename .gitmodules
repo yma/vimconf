@@ -25,3 +25,6 @@
 [submodule "scripts/plugin/nerdtree"]
 	path = scripts/plugin/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "scripts/plugin/ack.vim"]
+	path = scripts/plugin/ack.vim
+	url = https://github.com/mileszs/ack.vim
