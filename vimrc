@@ -22,12 +22,22 @@ set noequalalways "Disable automatic resizing on close/split
 set autoindent
 set smartindent
 
+function! RefreshTags()
+    if filereadable(".ctags_local")
+        silent !xargs -a .ctags_local ctags -R
+    else
+        silent !ctags -R
+    endif
+    redraw!
+endfunction
+
 "let mapleader="@"
 nmap <leader>l :set list!<CR>
 nmap <leader>n :set number!<CR>
 nmap <leader>d :bn<CR>:bd#<CR>
 nmap <leader>w :%s/\s\+$//gc<CR>
 nmap <leader>s :AckFromSearch<CR>
+nmap <leader>t :call RefreshTags()<CR>
 
 " Use the same symbols as TextMate for tabstops, EOLs, spaces
 set listchars=tab:▸\ ,eol:¬,trail:·
