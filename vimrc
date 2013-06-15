@@ -22,7 +22,7 @@ set noequalalways "Disable automatic resizing on close/split
 set autoindent
 set smartindent
 
-let mapleader="@"
+"let mapleader="@"
 nmap <leader>l :set list!<CR>
 nmap <leader>n :set number!<CR>
 nmap <leader>d :bn<CR>:bd#<CR>
