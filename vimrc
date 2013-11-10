@@ -38,6 +38,8 @@ nmap <leader>d :bn<CR>:bd#<CR>
 nmap <leader>w :%s/\s\+$//gc<CR>
 nmap <leader>s :AckFromSearch<CR>
 nmap <leader>t :call RefreshTags()<CR>
+nmap <leader>[ :tprevious<CR>
+nmap <leader>] :tnext<CR>
 
 " Use the same symbols as TextMate for tabstops, EOLs, spaces
 set listchars=tab:▸\ ,eol:¬,trail:·
