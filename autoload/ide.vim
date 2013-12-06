@@ -63,6 +63,16 @@ function! ide#PlayHtml()
     syn region  javaScriptExpression contained start=+&{+ keepend end=+};\?+ contains=@htmlJavaScript,@htmlPreproc
 endfunction
 
+function! ide#QuickfixFilenames()
+  " Building a hash ensures we get each buffer only once
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(values(buffer_numbers))
+endfunction
+
 command IDE call ide#IDE_nerdtree()
 command Limit80 set textwidth=80
 command PlayHtml call ide#PlayHtml()
+command! -nargs=0 -bar Qargs execute 'args ' . ide#QuickfixFilenames()
