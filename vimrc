@@ -1,3 +1,16 @@
+" Vunble init
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
+
+call vundle#end()
+" Vunble end
+
+filetype on
+filetype plugin on
+filetype indent on
+
 "Colors settings
 syntax on
 set background=dark
@@ -64,10 +77,6 @@ vnoremap > >gv
 " Auto scroll 5 lines when cursor is at the limit of the window
 set scrolloff=5
 
-
-filetype on
-filetype plugin on
-filetype indent on
 
 hi Folded ctermbg=0 ctermfg=2
 
