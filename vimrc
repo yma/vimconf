@@ -1,6 +1,3 @@
-execute pathogen#infect()
-Helptags
-
 "Colors settings
 syntax on
 set background=dark
