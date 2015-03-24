@@ -9,6 +9,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'terryma/vim-multiple-cursors'
 
 call vundle#end()
 " Vunble end
