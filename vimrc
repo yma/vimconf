@@ -17,14 +17,6 @@ filetype on
 filetype plugin on
 filetype indent on
 
-"Colors settings
-syntax on
-set background=dark
-"colorscheme ron
-"colorscheme inkpot
-"highlight Normal     ctermbg=none
-colorscheme synic
-
 set hidden "Don't close buffer, keep undo history
 "set mouse=a
 set linebreak
@@ -62,7 +54,7 @@ set list
 set number
 highlight LineNr ctermfg=darkgrey ctermbg=black
 
-set fcs+=vert:╹
+set fcs+=vert:╹,stl:·
 
 " Easy window resizing
 :map <C-h> <C-w><lt>
@@ -83,17 +75,13 @@ vnoremap > >gv
 " Auto scroll 5 lines when cursor is at the limit of the window
 set scrolloff=5
 
-
-hi Folded ctermbg=0 ctermfg=2
+"Colors settings
+syntax on
+set background=dark
 
 call ide#Tabs(4, 1)
 call ide#Shortcuts()
+call ide#Colors()
 
-
-" Plugins configuration
-
-" Gundo
-nmap <leader>u :GundoToggle<CR>
-
-" Gist
+" Gist plugin configuration
 let g:gist_post_private = 1

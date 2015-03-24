@@ -36,14 +36,16 @@ endfunction
 function! ide#Colors()
     highlight LineNr ctermfg=darkgrey ctermbg=black
 
-    highlight StatusLine ctermbg=black ctermfg=yellow
-    highlight StatusLineNC ctermbg=black ctermfg=green
-    highlight VertSplit ctermbg=black ctermfg=green
+    highlight StatusLine ctermfg=black ctermbg=yellow
+    highlight StatusLineNC ctermfg=black ctermbg=green
+    highlight VertSplit ctermfg=black ctermbg=green
 
-    highlight TabLineFill ctermbg=black ctermfg=white
-    highlight TabLine ctermfg=darkgreen ctermbg=black cterm=NONE
-    highlight TabLineSel ctermfg=white ctermbg=black
-    highlight Title ctermfg=yellow ctermbg=black
+    highlight TabLineFill ctermfg=black ctermbg=white
+    highlight TabLine ctermbg=darkgreen ctermfg=black cterm=NONE
+    highlight TabLineSel ctermbg=white ctermfg=black
+    highlight Title ctermbg=yellow ctermfg=black
+
+    highlight Folded ctermbg=black ctermfg=darkgreen
 endfunction
 
 function! ide#Tabs(spaces, expand)
