@@ -4,6 +4,11 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+
 call vundle#end()
 " Vunble end
 
