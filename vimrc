@@ -8,6 +8,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
+Plugin 'derekwyatt/vim-scala'
 
 call vundle#end()
 " Vunble end
