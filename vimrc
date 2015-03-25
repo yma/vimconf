@@ -10,6 +10,7 @@ Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'sandeepcr529/Buffet.vim'
 
 call vundle#end()
 " Vunble end
@@ -47,6 +48,7 @@ nmap <leader>d :bn<CR>:bd#<CR>
 nmap <leader>w :%s/\s\+$//gc<CR>
 nmap <leader>s :AckFromSearch<CR>
 nmap <leader>t :call RefreshTags()<CR>
+nmap <leader>b :Bufferlist<CR>
 
 " Use the same symbols as TextMate for tabstops, EOLs, spaces
 set listchars=tab:▸\ ,eol:¬,trail:·
