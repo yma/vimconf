@@ -40,12 +40,13 @@ function! ide#Colors()
     highlight StatusLineNC ctermfg=black ctermbg=green
     highlight VertSplit ctermfg=black ctermbg=green
 
-    highlight TabLineFill ctermfg=black ctermbg=white
-    highlight TabLine ctermbg=darkgreen ctermfg=black cterm=NONE
-    highlight TabLineSel ctermbg=white ctermfg=black
+    highlight TabLineFill ctermfg=black ctermbg=darkgreen
+    highlight TabLine ctermbg=black ctermfg=darkgreen cterm=NONE
+    highlight TabLineSel ctermbg=darkgreen ctermfg=black cterm=NONE
     highlight Title ctermbg=yellow ctermfg=black
 
     highlight Folded ctermbg=black ctermfg=darkgreen
+    highlight CursorLine ctermbg=lightgray ctermfg=black cterm=NONE
 endfunction
 
 function! ide#Tabs(spaces, expand)
