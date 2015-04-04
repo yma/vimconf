@@ -12,6 +12,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'sandeepcr529/Buffet.vim'
 Plugin 'sjl/gundo.vim.git'
+Plugin 'kchmck/vim-coffee-script.git'
 
 call vundle#end()
 " Vunble end
