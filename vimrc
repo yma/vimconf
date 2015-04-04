@@ -57,6 +57,7 @@ nmap <leader>u :GundoToggle<CR>
 nmap <leader>[ :tprevious<CR>
 nmap <leader>] :tnext<CR>
 nmap <leader>a :set spell!<CR>
+nmap <leader>p :set invpaste<CR>
 
 " Use the same symbols as TextMate for tabstops, EOLs, spaces
 set listchars=tab:▸\ ,eol:¬,trail:·
