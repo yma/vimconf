@@ -21,6 +21,8 @@ filetype on
 filetype plugin on
 filetype indent on
 
+set spelllang=fr,en
+
 set hidden "Don't close buffer, keep undo history
 "set mouse=a
 set linebreak
@@ -54,6 +56,7 @@ nmap <leader>b :Bufferlist<CR>
 nmap <leader>u :GundoToggle<CR>
 nmap <leader>[ :tprevious<CR>
 nmap <leader>] :tnext<CR>
+nmap <leader>a :set spell!<CR>
 
 " Use the same symbols as TextMate for tabstops, EOLs, spaces
 set listchars=tab:▸\ ,eol:¬,trail:·
