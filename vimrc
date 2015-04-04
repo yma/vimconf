@@ -50,7 +50,7 @@ nmap <leader>l :set list!<CR>
 nmap <leader>n :set number!<CR>
 nmap <leader>d :bn<CR>:bd#<CR>
 nmap <leader>w :%s/\s\+$//gc<CR>
-nmap <leader>s :AckFromSearch<CR>
+nmap <leader>s :AckFromSearch! -k<CR>
 nmap <leader>t :call RefreshTags()<CR>
 nmap <leader>b :Bufferlist<CR>
 nmap <leader>u :GundoToggle<CR>
