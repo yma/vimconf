@@ -51,6 +51,8 @@ nmap <leader>s :AckFromSearch<CR>
 nmap <leader>t :call RefreshTags()<CR>
 nmap <leader>b :Bufferlist<CR>
 nmap <leader>u :GundoToggle<CR>
+nmap <leader>[ :tprevious<CR>
+nmap <leader>] :tnext<CR>
 
 " Use the same symbols as TextMate for tabstops, EOLs, spaces
 set listchars=tab:▸\ ,eol:¬,trail:·
@@ -62,13 +64,20 @@ highlight LineNr ctermfg=darkgrey ctermbg=black
 set fcs+=vert:╹,stl:·
 
 " Easy window resizing
-:map <C-h> <C-w><lt>
-:map <C-j> <C-w>+
-:map <C-k> <C-w>-
-:map <C-l> <C-w>>
+noremap <C-h> <C-w><lt>
+noremap <C-j> <C-w>+
+noremap <C-k> <C-w>-
+noremap <C-l> <C-w>>
 
 " Autoinsert, autoindent brachets
 inoremap {<CR> {<CR>@<Esc>o}<Esc>k^i<Del>
+
+" Copy/Paste to clipboard
+noremap <leader>v "+p
+noremap <leader>V "+P
+noremap <leader>c "+yy
+vnoremap <leader>c "+y
+inoremap  <C-V> <C-R>+
 
 set dictionary+=/etc/vim/dico.txt
 set complete-=k complete+=k
