@@ -75,7 +75,19 @@ function! ide#QuickfixFilenames()
   return join(values(buffer_numbers))
 endfunction
 
+function! ide#Search(...)
+    let pattern = a:1
+    if a:0 > 1
+        let path = a:2
+    else
+        let path = "%"
+    endif
+    execute 'vimgrep /' . pattern . '/j '. path
+    cwindow
+endfunction
+
 command IDE call ide#IDE_nerdtree()
 command Limit80 set textwidth=80
 command PlayHtml call ide#PlayHtml()
 command! -nargs=0 -bar Qargs execute 'args ' . ide#QuickfixFilenames()
+command! -nargs=* Search call ide#Search(<f-args>)
