@@ -11,6 +11,7 @@ Plugin 'mattn/webapi-vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'sandeepcr529/Buffet.vim'
+Plugin 'sjl/gundo.vim.git'
 
 call vundle#end()
 " Vunble end
@@ -49,6 +50,7 @@ nmap <leader>w :%s/\s\+$//gc<CR>
 nmap <leader>s :AckFromSearch<CR>
 nmap <leader>t :call RefreshTags()<CR>
 nmap <leader>b :Bufferlist<CR>
+nmap <leader>u :GundoToggle<CR>
 
 " Use the same symbols as TextMate for tabstops, EOLs, spaces
 set listchars=tab:▸\ ,eol:¬,trail:·
