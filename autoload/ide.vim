@@ -86,8 +86,25 @@ function! ide#Search(...)
     cwindow
 endfunction
 
+function! ide#BuffersQuickfix()
+  " Fill the buffer list into the quickfix window
+  let qfbuffers = []
+  for bufnum in range(1, bufnr('$'))
+    if bufloaded(bufnum)
+        let item = {}
+        let item['bufnr'] = bufnum
+        let item['filename'] = bufname(bufnum)
+        let item['lnum'] = 1
+        let qfbuffers = qfbuffers + [item]
+    endif
+  endfor
+  call setqflist(qfbuffers)
+  cwindow
+endfunction
+
 command IDE call ide#IDE_nerdtree()
 command Limit80 set textwidth=80
 command PlayHtml call ide#PlayHtml()
 command! -nargs=0 -bar Qargs execute 'args ' . ide#QuickfixFilenames()
 command! -nargs=* Search call ide#Search(<f-args>)
+command Buffers call ide#BuffersQuickfix()
