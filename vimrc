@@ -113,3 +113,15 @@ let g:gist_post_private = 1
 set foldmethod=manual
 set foldlevelstart=20
 nmap <leader>f :set foldmethod=syntax<CR>:set foldmethod=manual<CR>
+
+
+
+" Insertion cursor
+if exists('$TMUX')
+  " tmux will only forward escape sequences to the terminal if surrounded by a DCS sequence
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=2\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
