@@ -107,3 +107,9 @@ call ide#Colors()
 
 " Gist plugin configuration
 let g:gist_post_private = 1
+
+
+" Auto folding
+set foldmethod=manual
+set foldlevelstart=20
+nmap <leader>f :set foldmethod=syntax<CR>:set foldmethod=manual<CR>
