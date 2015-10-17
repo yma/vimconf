@@ -14,6 +14,7 @@ Plugin 'sandeepcr529/Buffet.vim'
 Plugin 'sjl/gundo.vim.git'
 Plugin 'kchmck/vim-coffee-script.git'
 Plugin 'fatih/vim-go'
+Plugin 'rust-lang/rust.vim.git'
 
 let g:go_fmt_autosave = 0
 
